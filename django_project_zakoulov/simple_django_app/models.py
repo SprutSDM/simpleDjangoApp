@@ -16,12 +16,18 @@ class Driver(models.Model):
     last_name = models.CharField(max_length=100)
     born_date = models.DateField()
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
 
 class CarDriverOwn(models.Model):
     driver = models.ForeignKey(Driver, on_delete=models.CASCADE, related_name='driver')
     car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name='car')
     date_begin_own = models.DateField()
     date_end_own = models.DateField()
+
+    def __str__(self):
+        return f"{self.driver} - {self.car}"
 
 
 class DriverLicense(models.Model):
@@ -42,3 +48,5 @@ class DriverLicense(models.Model):
         default=LICENSE_A[0]
     )
 
+    def __str__(self):
+        return f"{self.owner}, type license: {self.license_type}"
