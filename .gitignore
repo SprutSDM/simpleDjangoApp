@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Editors directories
+.idea
+
+# Virtual environment
+venv
+
+# Local env files
+settings.ini
+.env
+
+# Migration files
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Self-signed certificates
+certs
