@@ -55,7 +55,9 @@ ROOT_URLCONF = 'django_project_zakoulov.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'simple_django_app/templates/'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
